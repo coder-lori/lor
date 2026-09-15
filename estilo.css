@@ -1,0 +1,84 @@
+.imagem-navio img{
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+
+}
+.imagens-filme img{
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+.fotos-personagens img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.imagens-filme img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+.fotos-personagens img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+.imagem-navio img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.imagens-filme{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.fotos-personagens {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Botão do elenco */
+.botao-elenco {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4682b4;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.botao-elenco:hover {
+  background-color: #4169e1;
+}
+
+/* Elenco escondido por padrão */
+#toggle-elenco:not(:checked) + .elenco {
+  display: none;
+}
+
+#toggle-elenco:checked + .elenco {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade in do elenco */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
